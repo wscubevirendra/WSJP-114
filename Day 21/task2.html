@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Highlight Task</title>
+    <style>
+        .highlight {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <p onclick="highlight(this)">Paragraph 1: This is some text.</p>
+    <p onclick="highlight(this)">Paragraph 2: Another piece of text.</p>
+    <p onclick="highlight(this)">Paragraph 3: More text here.</p>
+
+    <script>
+        function highlight(element) {
+            const paragraphs = document.getElementsByTagName('p');
+            for (let i = 0; i < paragraphs.length; i++) {
+                paragraphs[i].classList.remove('highlight');
+            }
+            element.classList.add('highlight');
+        }
+    </script>
+</body>
+</html>

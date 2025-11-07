@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <style>
+        .container {
+            width: 800px;
+            height: 400px;
+            border: 2px solid red;
+            margin: 50px auto;
+            display: flex;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            box-shadow: 2px 8px 3px gray;
+            background-color: green;
+
+            transition: 1s;
+        }
+
+        .container:hover .box {
+            transform: rotateZ(20deg) translateX(200px);
+            background-color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box"></div>
+
+
+    </div>
+
+</body>
+
+</html>

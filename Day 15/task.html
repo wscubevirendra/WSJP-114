@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <style>
+        .parent {
+            width: 800px;
+            height: 300px;
+            border: 2px solid black;
+            margin: auto;
+            position: relative;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: 1s;
+        }
+
+        .parent:hover .box {
+            top: 0;
+            left: 700px;
+    
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="box"></div>
+    </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+<script>
+    //Write a program that checks if it’s raining or not and advises whether to take a raincoat.
+
+    // var raining = false;   //yes no\
+    // if (raining == true) {
+    //     console.log("take a raincoat")
+    // } else {
+    //     console.log("raincoat is not required")
+    // }
+
+    //Create a program that determines if a CIBIL score is excellent, good, average, or poor based on given ranges.
+
+    //excellent-750-900
+    //good-650-750
+    //average-550-650
+    //poor-300-550
+
+    // var cibilScore = Number(prompt("Cibil score"));  //str-------Number
+    // if (cibilScore >= 750 && cibilScore <= 900) {
+    //     console.log("Excellent")
+    // } else if (cibilScore >= 650 && cibilScore < 750) {
+    //     console.log("Good")
+    // } else if (cibilScore >= 550 && cibilScore < 650) {
+    //     console.log("Average")
+    // } else if (cibilScore >= 300 && cibilScore < 550) {
+    //     console.log("Poor")
+    // } else {
+    //     console.log("Invalid Score")
+    // }
+
+    //Validate a password based on its length and classify it as weak, or strong.  length 7
+    // var password = prompt("type password");
+    // if (password.length >= 7) {
+    //     console.log("strong")
+    // } else {
+    //     console.log("weak")
+    // }
+
+    //Calculate simple interest, and apply a discount for short-term loans (less than 1 year).
+
+    // var principal = 1000;
+    // var rate = 10;
+    // var timeInMonth = 12;
+    // var timeInYear = timeInMonth / 12;
+    // var simpleInterest = (principal * rate * timeInYear) / 100;
+    // console.log(simpleInterest,"Before Discound")
+    // if (timeInYear <= 1) {
+    //     var d = simpleInterest * 0.05;
+    //     simpleInterest = simpleInterest - d
+    // }
+    // console.log(simpleInterest,"After Discound")
+
+    // console.log(principal + simpleInterest)
+
+    var unit = 200;
+    var FixedSurcharge = 50;
+    var result = null;
+
+
+    if (unit >= 0 && unit <= 100) {
+        result = unit * 3
+    } else if (unit > 100 && unit <= 300) {
+        result = unit * 5
+    } else {
+        result = unit * 10
+    }
+
+    console.log(result+FixedSurcharge)
+
+
+
+</script>

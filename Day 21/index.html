@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            width: 100%;
+            height: 100vh;
+            background-image: linear-gradient(to bottom, #2980b9, #3498db);
+            background-size: cover;
+
+        }
+
+        .main {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            list-style: none;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .circle {
+            /* box-shadow: inset 0 0 25px rgba(26, 190, 232, 0.4), inset -5px -10px 35px rgba(255, 255, 255, 0.777); */
+            /* border-radius: 50%; */
+            position: absolute;
+            bottom: -300px;
+            animation: move infinite linear;
+        }
+
+        .circle:nth-child(1) {
+            width: 150px;
+            height: 150px;
+            left: 10%;
+            animation-duration: 2s;
+            background-color: teal;
+
+        }
+
+
+        .circle:nth-child(2) {
+            width: 200px;
+            height: 200px;
+            left: 30%;
+            animation-duration: 4s;
+            background-color: yellow;
+
+
+
+        }
+
+        .circle:nth-child(3) {
+            width: 75px;
+            height: 75px;
+            left: 50%;
+            animation-duration: 6s;
+            background-color: blue;
+
+
+
+        }
+
+        .circle:nth-child(4) {
+            width: 175px;
+            height: 175px;
+            animation-duration: 4s;
+            background-color: brown;
+            left: 70%;
+        }
+
+        .circle:nth-child(5) {
+            width: 50px;
+            height: 50px;
+            left: 90%;
+            animation-duration: 7s;
+            background-color:firebrick;
+
+
+        }
+
+        @keyframes move {
+            0% {
+                transform: translate0(0, 0) scale(0.1) rotate(0deg);
+
+            }
+
+            50% {
+                transform: translate(-100px, -400px) scale(0.2) rotate(360deg);
+
+            }
+
+            100% {
+                transform: translate(-300px, -800px) scale(1) rotate(360deg);
+
+            }
+
+
+
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <ul class="main">
+        <li class="circle"></li>
+        <li class="circle"></li>
+        <li class="circle"></li>
+        <li class="circle"></li>
+        <li class="circle"></li>
+    </ul>
+
+
+
+
+</body>
+
+</html>

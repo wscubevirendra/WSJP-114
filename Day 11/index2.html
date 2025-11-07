@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 900px;
+            height: 400px;
+            border: 2px double red;
+            margin: auto;
+            font-size: 90px;
+            color: gold;
+            display: flex;
+
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            border: 2px solid green;
+            text-align: center;
+            padding-top: 20px;
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">1</div>
+        <div style="order: 2;" class="box">2</div>
+        <div style="order: 1;" class="box">3</div>
+        <div class="box">4</div>
+
+
+    </div>
+
+</body>
+
+</html>
