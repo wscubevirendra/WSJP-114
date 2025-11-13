@@ -1,0 +1,60 @@
+<script>
+
+
+    // var student = [
+    //     {
+    //         name: "Mohit",
+    //         age: 23,
+    //         city: "Jaipur"
+    //     },
+    //     {
+    //         name: "Rohit",
+    //         age: 34,
+    //         city: "Kota"
+    //     },
+    //     {
+    //         name: "Mahesh",
+    //         age: 21,
+    //         city: "Sikar"
+    //     }
+    // ];
+
+    // for (st of student) {
+    //     // console.log("Student Name " + st.name + " and age " + st.age );
+    //     console.log(`student Name ${st.name}  and age ${st.age}`)
+    // }
+
+
+    // var students = [
+    //     { name: "Amit", age: 21, gender: "Male", city: "Jaipur" },
+    //     { name: "Priya", age: 20, gender: "Female", city: "Delhi" },
+    //     { name: "Rahul", age: 22, gender: "Male", city: "Mumbai" },
+    //     { name: "Sneha", age: 19, gender: "Female", city: "Pune" },
+    //     { name: "Vikram", age: 23, gender: "Male", city: "Bangalore" }
+    // ];
+
+    // for (st of students) {
+    //     console.log(st.name,st.age,st.gender,st.city)
+    // }
+
+    var employees = [
+        { name: "Mandeep", salary: 60000 },
+        { name: "Aman", salary: 45000 },
+        { name: "Ravi", salary: 52000 },
+        { name: "Mahesh", salary: 75000 },
+        { name: "Vishnu", salary: 200000 }
+
+    ];
+
+    var list = [];
+    for (data of employees) {
+        if (data.salary >= 50000) {
+            list.push(data.name)
+        }
+
+    }
+
+    console.log(list)
+
+
+</script>

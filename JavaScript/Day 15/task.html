@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        #image {
+
+            box-shadow: 0px 4px 10px gray;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <img width="300" height="300" id="image"
+        src="https://media.istockphoto.com/id/1334419989/photo/3d-red-question-mark.jpg?s=612x612&w=0&k=20&c=bpaGVuyt_ACui3xK8CvkeoVQC-jczxANZTMXGKAE11E="
+        alt="">
+    <button onclick="bestShow()">BEST TV SHOW</button>
+
+    <script>
+        var image = document.getElementById("image");
+
+        function bestShow() {
+            image.src = "https://m.media-amazon.com/images/M/MV5BMjlhNWMxNWUtZmRmOC00MGZlLWJhYjctNWI3MjZhZDZiN2RiXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
+
+            image.style.padding="10px"
+            image.style.background="green"
+        }
+
+    </script>
+</body>
+
+</html>

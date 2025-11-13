@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        #box {
+            width: 300px;
+            height: 300px;
+            margin: 30px auto;
+            box-shadow: 0px 4px 10px gray;
+            transition: 400ms;
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="box"> </div>
+        <button onclick="addStyle(1)">Add</button>
+        <button onclick="addStyle(2)">Remove</button>
+
+
+    </div>
+
+    <script>
+        var box = document.getElementById("box");
+
+        function addStyle(flag) {
+            if (flag == 1) {
+                box.style.background = "red";
+                box.style.transform = "scale(1.1)"
+                box.innerHTML = "<h1>Hello</h1>"
+            } else {
+                box.style.background = "";
+                box.style.transform = ""
+                box.innerHTML = ""
+            }
+
+        }
+
+
+
+    </script>
+
+
+</body>
+
+</html>
