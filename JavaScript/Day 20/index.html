@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100%;
+            height: 100vh;
+            background-color: black;
+            cursor: none;
+        }
+
+        .dot {
+            width: 40px;
+            height: 40px;
+            box-shadow: 0px 5px 4px red;
+            background-color: white;
+            border-radius: 50%;
+            transform: translate(0, 0);
+            transition: 100ms;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="dot"></div>
+
+    <script>
+        var body = document.querySelector("body");
+        var dot = document.querySelector(".dot")
+
+
+        body.addEventListener(
+            "mousemove",
+            function (event) {
+                console.log(event)
+                dot.style.transform = `translate(${event.x}px, ${event.y}px)`
+            }
+        )
+
+
+
+    </script>
+
+</body>
+
+</html>

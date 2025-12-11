@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css" />
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css" />
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            /* border: 2px solid red; */
+        }
+
+        .card {
+            padding: 10px;
+            text-align: justify;
+        }
+
+        .slick-prev:before,
+        .slick-next:before {
+            color: black;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti suscipit laborum id, fuga
+            eum harum, iusto culpa eius labore, officiis perspiciatis voluptate consectetur at! Labore excepturi quae
+            nam sed at!</div>
+        <div class="card">2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti suscipit laborum id, fuga
+            eum harum, iusto culpa eius labore, officiis perspiciatis voluptate consectetur at! Labore excepturi quae
+            nam sed at!</div>
+        <div class="card">3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti suscipit laborum id, fuga
+            eum harum, iusto culpa eius labore, officiis perspiciatis voluptate consectetur at! Labore excepturi quae
+            nam sed at!</div>
+        <div class="card">4 Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti suscipit laborum id, fuga
+            eum harum, iusto culpa eius labore, officiis perspiciatis voluptate consectetur at! Labore excepturi quae
+            nam sed at!</div>
+        <div class="card">5 Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti suscipit laborum id, fuga
+            eum harum, iusto culpa eius labore, officiis perspiciatis voluptate consectetur at! Labore excepturi quae
+            nam sed at!</div>
+        <div class="card">6 Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti suscipit laborum id, fuga
+            eum harum, iusto culpa eius labore, officiis perspiciatis voluptate consectetur at! Labore excepturi quae
+            nam sed at!</div>
+        <div class="card">7 Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti suscipit laborum id, fuga
+            eum harum, iusto culpa eius labore, officiis perspiciatis voluptate consectetur at! Labore excepturi quae
+            nam sed at!</div>
+
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>
+    <script>
+        $('.container').slick({
+            dots: true,
+            infinite: true,
+            speed: 600,
+            slidesToShow: 4,
+            slidesToScroll: 2,
+            autoplay: true,
+            autoplaySpeed: 2000,
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3,
+                        infinite: true,
+                        dots: true
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+                // You can unslick at a given breakpoint now by adding:
+                // settings: "unslick"
+                // instead of a settings object
+            ]
+        });
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            background: linear-gradient(45deg, #1a1a2e, #16213e);
+            margin: 0;
+            font-family: 'Orbitron', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .clock-container {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 40px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            transition: all 0.3s ease;
+
+        }
+
+        .time-container {
+            display: flex;
+            gap: 50px;
+            margin-bottom: 40px;
+        }
+
+        .time {
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            padding: 15px;
+            min-width: 100px;
+            color: #00ff9f;
+            font-size: 4rem;
+            font-weight: bold;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.2s ease;
+            color: #4eb8dd;
+
+        }
+
+        .date {
+            color: rgba(0, 0, 0, 0.3);
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .active {
+            color: #00ff9f !important;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body onload="clock()">
+    <div class="clock-container">
+        <div class="time-container">
+            <div class="time"></div>
+            <div class="time"></div>
+            <div class="time"></div>
+        </div>
+
+        <div class="date">
+
+        </div>
+
+    </div>
+
+
+    <script>
+        var times = document.querySelectorAll('.time');
+        var days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+        var dateContainer = document.querySelector('.date');
+
+        function updateClock() {
+            var d = new Date();
+            var h = d.getHours();
+            var m = d.getMinutes();
+            var s = d.getSeconds();
+
+
+            if (h >= 12) {
+                h = h - 12;
+            }
+            
+            times[0].innerText = h < 10 ? '0' + h : h;
+            times[1].innerText = m < 10 ? '0' + m : m;
+            times[2].innerText = s < 10 ? '0' + s : s;
+        }
+
+        function clock() {
+            setInterval(updateClock, 1000);
+            var d = new Date();
+
+            for (var i = 0; i < days.length; i++) {
+                var d = new Date();
+                var span = document.createElement('span');
+                console.log(i, d.getDay())
+                if (i === d.getDay()) {
+                    span.classList.add('active');
+                }
+                span.innerText = days[i] + " ";
+                dateContainer.append(span)
+            }
+
+
+        }
+
+
+
+
+    </script>
+
+</body>
+
+</html>

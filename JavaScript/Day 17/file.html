@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 1000px;
+            height: 500px;
+            /* border: 2px solid red; */
+            margin: 20px auto;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            align-items: center;
+            position: relative;
+
+        }
+
+        .thumb {
+            width: 30%;
+            height: 200px;
+            box-shadow: 0px 5px 10px gray;
+            cursor: pointer;
+        }
+
+        #popUp {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: red;
+            display: none;
+            transition: 1s;
+        }
+
+        #popUp button {
+            position: relative;
+            top: 0;
+            left: 0;
+            background-color: red;
+            padding: 10px;
+        }
+
+        .active {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img src="1.jpg" alt="" class="thumb">
+        <img src="2.jpg" alt="" class="thumb">
+        <img src="3.jpg" alt="" class="thumb">
+        <img src="4.jpg" alt="" class="thumb">
+        <img src="3.jpg" alt="" class="thumb">
+        <img src="1.jpg" alt="" class="thumb">
+        <div id="popUp">
+            <img onclick="removePopUp()" width="100%" height="100%" id="popup_image" src="" alt="">
+
+        </div>
+
+    </div>
+
+
+    <script>
+        var popup_image = document.getElementById("popup_image");
+        var popUp = document.getElementById("popUp")
+        var thumb = document.querySelectorAll(".thumb")
+
+        // function imagePopUp(image) {
+        //     popup_image.src = image.src;
+        //     popUp.classList.add("active")
+        // }
+
+        // function removePopUp() {
+        //     popUp.style.transform = "scale(0)"
+        // }
+
+        for (let image of thumb) {
+            image.addEventListener(
+                "click",
+                function (event) {
+                    popup_image.src = event.target.src;
+                    popUp.classList.add("active")
+
+                }
+            )
+        }
+
+
+    </script>
+
+
+</body>
+
+</html>

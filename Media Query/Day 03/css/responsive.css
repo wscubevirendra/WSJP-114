@@ -1,0 +1,22 @@
+@media (max-width:990px) {
+    .middle-container-top {
+        display: none;
+    }
+
+    header ul {
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 50%;
+        height: 100vh;
+        z-index: 998;
+        background: rgba(0, 0, 0, 0.8);
+        padding: 20px;
+        color: white;
+    }
+
+    #toggleBtn{
+        display: block;
+    }
+}

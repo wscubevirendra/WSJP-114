@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+
+        .container {
+            width: 800px;
+            padding: 10px;
+            min-height: 400px;
+            /* border: 2px solid red; */
+            box-shadow: rgba(149, 157, 165, 0.4) 0px 8px 24px;
+            margin: 50px auto;
+        }
+
+        .input-container input {
+            width: 90%;
+            padding: 4px;
+        }
+
+        button {
+            padding: 4px 20px;
+            background-color: salmon;
+            color: white;
+            outline: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        ul {
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        ul li {
+            display: flex;
+            justify-content: space-between;
+            background-color: cadetblue;
+            padding: 4px 12px;
+            border-radius: 10px;
+            color: white;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="input-container">
+            <input id="inp" type="text">
+            <button>Add</button>
+        </div>
+        <ul id="mylist">
+
+        </ul>
+
+    </div>
+
+
+    <script>
+        var btn = document.querySelector(".input-container button");
+        var mylist = document.querySelector("#mylist");
+        var inp = document.querySelector("#inp");
+
+
+        btn.addEventListener(
+            "click",
+            toDo()
+        )
+
+        inp.addEventListener(
+            "keypress",
+            function (event) {
+                if (event.key == "Enter") {
+                    toDo()
+                }
+            }
+        )
+
+
+        function toDo() {
+            var value = inp.value.trim();
+            if (value == "") return alert("No input Value")
+            var li = document.createElement("li");
+            li.innerHTML = `${value}<button>X</button>`
+
+            li.querySelector("button").addEventListener(
+                "click",
+                function () {
+                    li.remove()
+                }
+            )
+
+
+
+            mylist.prepend(li)
+            inp.value = ""
+        }
+    </script>
+
+
+</body>
+
+</html>

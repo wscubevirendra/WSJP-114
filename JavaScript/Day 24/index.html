@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <style>
+        .card {
+            width: 400px;
+            height: 100px;
+            padding: 20px;
+            background-origin: 20px;
+            box-shadow: 0px 2px 3px teal;
+            margin: 50px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+            font-size: 25px;
+
+        }
+
+        button {
+            background-color: yellow;
+            border: none;
+            padding: 6px;
+            border-radius: 20px;
+            font-size: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <button>Start</button>
+        <h2>0</h2>
+        <button disabled>Stop</button>
+    </div>
+
+    <script>
+        var btn = document.querySelectorAll("button");
+        var h2 = document.querySelector("h2")
+        var count = 0;
+        var myInterval = null;
+
+        btn[0].addEventListener(
+            "click",
+            function () {
+                myInterval = setInterval(
+                    function () {
+                        count++
+                        h2.innerText = count
+                        btn[0].disabled = true
+                        btn[1].disabled = false
+                    },
+                    1000
+                )
+
+            }
+        )
+
+
+        btn[1].addEventListener(
+            "click",
+            function () {
+                clearInterval(myInterval)
+                btn[0].disabled = false
+                btn[1].disabled = true
+            }
+        )
+
+    </script>
+
+</body>
+
+</html>

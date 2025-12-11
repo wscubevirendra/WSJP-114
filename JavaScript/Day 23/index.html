@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .container {
+            width: 800px;
+            height: 500px;
+            background-color: white;
+            padding: 10px;
+            margin: 20px auto;
+            /* border: 1px solid black; */
+        }
+
+        .accordion-container {
+            width: 100%;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+            padding: 10px;
+        }
+
+        .accord-title {
+
+            font-size: 12px;
+            color: gray;
+            cursor: pointer;
+            padding: 6px 0px;
+        }
+
+        .accord-title:hover {
+            color: teal;
+            font-weight: bold;
+        }
+
+        .accord-content {
+            height: 0;
+            overflow: hidden;
+            transition: 800ms;
+            line-height: 2;
+            text-align: justify;
+
+        }
+
+        .open {
+            padding-top: 10px;
+            border-top: 2px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="accordion-container">
+            <div class="accord-title">
+                <h2>What are the advantages of bus ticket booking with redBus?</h2>
+            </div>
+            <div style="height: 140px;" class="accord-content open">
+                <p>
+                    There are many advantages of booking bus tickets online with redBus. redBus is India’s leading bus
+                    ticket booking platform, where you can book private or government-owned buses. redBus allows you to
+                    find the different types of buses, choose the preferred bus seats, and find your nearest boarding
+                    and dropping points. You can also filter the buses based on timings, like morning, evening, etc.
+                </p>
+            </div>
+
+        </div>
+        <div class="accordion-container">
+            <div class="accord-title">
+                <h2>Why book bus tickets online on redBus?</h2>
+            </div>
+            <div class="accord-content">
+                <p>
+                    Booking bus tickets online on redBus is increasingly becoming the preferred choice for travellers
+
+                </p>
+            </div>
+
+        </div>
+        <div class="accordion-container">
+            <div class="accord-title">
+                <h2>How can I get the discounts on the bus booking?</h2>
+            </div>
+            <div class="accord-content">
+                <p>
+                    Primo Bus Ticket: redBus has launched Primo bus services, where passengers can enjoy travelling in
+                    high-rated buses with best-in-class services. While looking for bus tickets on the desired route,
+                    customers can check the Primo tag to choose this excellent service. From hygiene standards to
+                    on-time service and comfort, passengers can benefit from the online bus booking experience from
+                    Primo buses.
+                </p>
+            </div>
+
+        </div>
+        <div class="accordion-container">
+            <div class="accord-title">
+                <h2>How can I get the discounts on the bus booking?</h2>
+            </div>
+            <div class="accord-content">
+                <p>
+                    Primo Bus Ticket: redBus has launched Primo bus services, where passengers can enjoy travelling in
+                    high-rated buses with best-in-class services. While looking for bus tickets on the desired route,
+                    customers can check the Primo tag to choose this excellent service. From hygiene standards to
+                    on-time service and comfort, passengers can benefit from the online bus booking experience from
+                    Primo buses.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+        var accordTitle = document.querySelectorAll(".accord-title");
+
+        for (let title of accordTitle) {
+            title.addEventListener(
+                "click",
+                function () {
+                    var accordContent = title.nextElementSibling;
+                    var openContent = document.querySelector(".open")
+                    if (openContent != null) {
+                        openContent.classList.remove("open")
+                        openContent.style = "";
+                    }
+                    if (accordContent == openContent) return
+
+                    accordContent.classList.add("open")
+                    accordContent.style.height = accordContent.scrollHeight + 12 + "px"
+                    accordContent.style.overflow = ""
+                }
+            )
+        }
+
+    </script>
+
+</body>
+
+</html>
