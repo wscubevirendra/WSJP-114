@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    font-family: "Inter", sans-serif;
+
+}
+
+.btn-bg {
+    background-color: #6B46FF;
+}
+
+header form input {
+    min-width: 379px !important;
+    outline: none !important;
+}
+
+header form i {
+    top: 10px;
+    right: 20px;
+}
+
+.bg-body-tertiary {
+    background-color: white !important;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+}
+
+.top-section-left h1 {
+    font-size: clamp(25px, 10vw, 60px);
+    font-weight: bold;
+    color: #101828;
+    text-shadow: 0px 4px 4px #00000040;
+}
